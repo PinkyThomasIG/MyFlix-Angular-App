@@ -1,0 +1,25 @@
+<h2>Update Profile</h2>
+<form (ngSubmit)="onSubmit()">
+  <mat-form-field>
+    <input
+      matInput
+      placeholder="Username"
+      [(ngModel)]="username"
+      name="username"
+      required
+    />
+  </mat-form-field>
+
+  <mat-form-field>
+    <input
+      matInput
+      placeholder="Email"
+      [(ngModel)]="email"
+      name="email"
+      required
+      email
+    />
+  </mat-form-field>
+
+  <button mat-raised-button type="submit">Save</button>
+</form>

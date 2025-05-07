@@ -1,1 +1,53 @@
-/* You can add global styles to this file, and also import other style files */
+@use "@angular/material" as mat;
+
+html {
+  @include mat.theme(
+    (
+      color: (
+        theme-type: light,
+        primary: mat.$azure-palette,
+        tertiary: mat.$blue-palette,
+      ),
+      typography: Roboto,
+      density: 0,
+    )
+  );
+}
+
+// Specific adjustments to prevent dialog styles from being overridden
+::ng-deep mat-dialog-container {
+  padding: 20px !important; // Ensure dialog content padding
+  width: 600px !important; // Ensure dialog width
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+::ng-deep mat-dialog-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Increased gap between content */
+  padding: 20px;
+}
+
+::ng-deep mat-dialog-actions {
+  padding: 15px;
+  text-align: right;
+}
+
+::ng-deep mat-dialog-title {
+  margin-bottom: 20px;
+  font-size: 2em;
+}
+
+::ng-deep mat-dialog-content p {
+  margin-bottom: 15px;
+  font-size: 1.2em;
+  line-height: 1.6;
+}
+
+::ng-deep mat-dialog-actions button {
+  margin-right: 15px;
+  margin-top: 15px;
+  padding: 12px 20px;
+  font-size: 1em;
+}

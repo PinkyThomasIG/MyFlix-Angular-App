@@ -1,0 +1,17 @@
+<!-- welcome.component.html -->
+<div class="welcome-container">
+  <h1>Welcome to MyFlix</h1>
+  <p>Your go-to place for all things movies!</p>
+  <div class="button-container">
+    <button
+      mat-raised-button
+      color="primary"
+      (click)="openRegistrationDialog()"
+    >
+      Register
+    </button>
+    <button mat-raised-button color="accent" (click)="openLoginDialog()">
+      Login
+    </button>
+  </div>
+</div>

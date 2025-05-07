@@ -1,0 +1,58 @@
+<div class="registration-dialog">
+  <h2>Register</h2>
+  <form (ngSubmit)="registerUser()">
+    <div class="form-group">
+      <label for="username">Username</label>
+      <input
+        id="username"
+        type="text"
+        [(ngModel)]="userData.Username"
+        name="username"
+        required
+        placeholder="Enter your username"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input
+        id="password"
+        type="password"
+        [(ngModel)]="userData.Password"
+        name="password"
+        required
+        placeholder="Enter your password"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input
+        id="email"
+        type="email"
+        [(ngModel)]="userData.Email"
+        name="email"
+        required
+        placeholder="Enter your email"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="birthday">Birthday</label>
+      <input
+        id="birthday"
+        type="date"
+        [(ngModel)]="userData.Birthday"
+        name="birthday"
+      />
+    </div>
+
+    <!-- Error Message -->
+    <div *ngIf="errorMessage" class="error-message">
+      <p>{{ errorMessage }}</p>
+    </div>
+
+    <!-- Submit Button -->
+    <button type="submit" [disabled]="isSubmitting">Register</button>
+  </form>
+</div>

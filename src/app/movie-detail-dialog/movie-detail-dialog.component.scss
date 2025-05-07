@@ -1,0 +1,45 @@
+mat-dialog-content {
+  padding: 20px; // Padding around the content
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+mat-dialog-actions {
+  padding: 10px; // Padding around the buttons
+}
+mat-dialog-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; // Adds space between elements
+}
+
+@media (max-width: 768px) {
+  mat-dialog-content {
+    padding: 15px;
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  mat-dialog-content {
+    padding: 10px;
+    width: 95%;
+  }
+}
+
+h1.mat-dialog-title {
+  margin-bottom: 20px; // Adds space between the title and content
+  font-size: 1.8em; // Adjust the title size for better visibility
+}
+
+mat-dialog-content p {
+  margin-bottom: 10px; // Adds space between paragraphs
+  font-size: 1.1em;
+  line-height: 1.5;
+}
+mat-dialog-actions button {
+  margin-right: 10px; // Adds space between buttons
+  margin-top: 10px;
+  padding: 10px 20px;
+}

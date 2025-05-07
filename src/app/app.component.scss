@@ -1,0 +1,30 @@
+.welcome-container {
+  display: flex;
+  justify-content: center; /* Centers content horizontally */
+  align-items: center; /* Centers content vertically */
+  flex-direction: column; /* Stacks elements vertically */
+  height: 100vh; /* Full height of the viewport */
+  width: 100%; /* Ensure the container spans the full width */
+  text-align: center; /* Centers text inside */
+}
+
+h1 {
+  font-size: 3em;
+  color: #3f51b5; /* Primary color */
+}
+
+p {
+  font-size: 1.2em;
+  color: #757575; /* Secondary text color */
+  margin-bottom: 40px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Space between buttons */
+}
+
+button {
+  width: 150px; /* Set a fixed width for buttons */
+}

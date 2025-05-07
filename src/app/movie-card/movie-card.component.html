@@ -1,0 +1,20 @@
+<!-- Wrapper for movie cards -->
+<div class="movie-card-container">
+  <div *ngFor="let movie of movies" class="movie-card">
+    <h3>{{ movie.title }}</h3>
+
+    <!-- Buttons for movie actions -->
+    <div class="button-container">
+      <button mat-button (click)="openMovieDetailDialog(movie)">Details</button>
+
+      <button mat-button (click)="viewGenre(movie)">Genre</button>
+      <button mat-button (click)="viewDirector(movie)">Director</button>
+      <button mat-button (click)="addToFavorite(movie)">
+        Add to Favorites
+      </button>
+      <button mat-button (click)="removeFromFavorite(movie)">
+        Remove from Favorites
+      </button>
+    </div>
+  </div>
+</div>

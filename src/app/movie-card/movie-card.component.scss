@@ -1,0 +1,82 @@
+/* Ensure the body and html are set to take full height and width */
+html,
+body {
+  height: 100%; /* Ensure full height */
+  margin: 0; /* Remove margin */
+  padding: 0; /* Remove padding */
+}
+
+/* The container that holds the grid */
+.movie-card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Centers items horizontally */
+  align-items: center; /* Centers items vertically */
+  gap: 20px; /* Adds space between items */
+  padding: 20px; /* Padding around the grid */
+  min-height: 100vh; /* Ensures the container takes the full viewport height */
+  width: 100%; // Full width of the container
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+/* Individual movie card container */
+.movie-card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f0f8ff; /* Light blue background color for movie cards */
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 250px; /* Fixed width for movie cards */
+
+  /* Hover effect */
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+  }
+}
+
+/* Title style */
+.movie-card-title {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Details style */
+.movie-card-details {
+  font-size: 1.1em;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+/* Button style */
+button {
+  margin-top: 10px;
+  margin-right: 5px;
+  background-color: #3b8ea5;
+  color: white;
+
+  /* Hover effect for buttons */
+  &:hover {
+    background-color: #276d7c;
+  }
+}
+
+/* Responsiveness: Adjust card size for smaller screens */
+@media (max-width: 768px) {
+  .movie-card-container {
+    width: 200px; // Smaller cards for tablets
+  }
+}
+
+@media (max-width: 480px) {
+  .movie-card-container {
+    width: 150px; // Even smaller cards for phones
+  }
+}

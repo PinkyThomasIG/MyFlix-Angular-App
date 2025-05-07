@@ -1,0 +1,36 @@
+:host {
+  display: block;
+  height: 100vh;
+  width: 100vw;
+}
+
+.welcome-container {
+  display: flex;
+  justify-content: center; // Center horizontally
+  align-items: center; // Center vertically
+  flex-direction: column;
+  height: 100%; // Full height of host
+  width: 100%;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3em;
+  color: #4caf50; // Primary color
+}
+
+p {
+  font-size: 1.2em;
+  color: #757575;
+  margin-bottom: 40px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px; // Space between buttons
+}
+
+button {
+  width: 150px;
+}

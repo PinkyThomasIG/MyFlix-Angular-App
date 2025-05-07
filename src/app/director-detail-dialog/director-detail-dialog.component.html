@@ -1,0 +1,11 @@
+<h2 mat-dialog-title>{{ data.name }}</h2>
+<div mat-dialog-content>
+  <p><strong>Bio:</strong> {{ data.bio }}</p>
+  <p><strong>Birth Year:</strong> {{ data.birth || "N/A" }}</p>
+  <!-- Fallback to 'N/A' if birth is empty -->
+  <p><strong>Death Year:</strong> {{ data.death || "N/A" }}</p>
+  <!-- Fallback to 'N/A' if death is empty -->
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="closeDialog()">Close</button>
+</div>
